@@ -2,7 +2,8 @@
 
 ## 😺 Pokedexamedi 
 Pokexamedi is an optimized developed web platform for searching your favorite pokemons right from the pokeapi, it was developed by [lucas repetto](https://github.com/lurepetto)
-using [Typescript][https://www.typescriptlang.org/docs/] and [React App](https://reactjs.org/docs/getting-started.html), and also builded and deployed using [GatsbyJS](https://www.gatsbyjs.com/docs).
+using [Typescript][https://www.typescriptlang.org/docs/] and [React App](https://reactjs.org/docs/getting-started.html). Builded with [GatsbyJS](https://www.gatsbyjs.com/docs)
+and automated deploy with [GatsbyCloud](https://www.gatsbyjs.com/products/cloud/).
 
 You can find the production server [here](https://pokedexamedimain27500.gatsbyjs.io).
 
