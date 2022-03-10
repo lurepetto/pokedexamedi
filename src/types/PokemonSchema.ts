@@ -27,22 +27,22 @@ export interface PokemonSchema {
     sprites: PokemonSpritesSchema;
 }
 
-export type StandardResponse = {
-    name: string;
-    url: string;
-};
+// export type StandardResponse = {
+//     name: string;
+//     url: string;
+// };
 
-export interface Pokemon {
-    id: number;
-    name: string;
-    baseExperience: number;
-    height: number;
-    isDefault: boolean;
-    order: number;
-    weight: number;
-    abilities: {
-        ability: StandardResponse,
-        isHidden: boolean
-        slot: number;
-    }
-}
+// export interface Pokemon {
+//     id: number;
+//     name: string;
+//     baseExperience: number;
+//     height: number;
+//     isDefault: boolean;
+//     order: number;
+//     weight: number;
+//     abilities: {
+//         ability: StandardResponse,
+//         isHidden: boolean
+//         slot: number;
+//     }
+// }
