@@ -1,16 +1,8 @@
 import React, { useState, useEffect } from "react";
 import Pokedex from '../Pokedex/Pokedex';
 import './App.css';
-import { UnpatchedPokemonSchema, PokemonSpritesSchema, PokemonSchema } from '../../types/PokemonSchema';
-import { pokemonData } from "../../data/pokemonData";
-import { getPokemons, getPokemonData } from '../../services/api';
-
-interface AppState {
-    searchField: string;
-    allPokemons: PokemonSchema[];
-    searchedPokemons: PokemonSchema[];
-    selectedPokemons: PokemonSchema;
-}
+import { getPokemons, getPokemonData, searchPokemon } from '../../services/api';
+import Searchbar from "../Searchbar/Searchbar";
 
 export default function App () {
     const [pokemons, setPokemons] = useState<any>([]);
@@ -18,6 +10,7 @@ export default function App () {
     const [total, setTotal] = useState(0);
     const [loading, setLoading] = useState(true);
     const [searching, setSearching] = useState(false);
+    const [notFound, setNotFound] = useState(false);
 
     const fetchPokemons = async () => {
         try {
@@ -41,8 +34,40 @@ export default function App () {
         }
     }, [page]);
 
+    const onSearch = async (pokemon:any) => {
+        if (!pokemon) {
+            return fetchPokemons();
+        }
+
+        setLoading(true);
+        setNotFound(false);
+        setSearching(true);
+        const result = await searchPokemon(pokemon);
+        if (!result) {
+            setNotFound(true);
+            setLoading(false);
+            return
+        } else {
+            setPokemons([result]);
+            setPage(0);
+            setTotal(1);
+        }
+        setLoading(false);
+        setSearching(false);
+    };
+
     return (
         <div>
+            <div className="header">
+                <h1>Pokedexamedi</h1>
+            </div>
+            <Searchbar onSearch={onSearch} />
+            {notFound ? (
+                <div className="not-found">
+                    <span className="sad-pika">😿</span>
+                    We are sorry! We didn't found the Pokemon you were looking for :(
+                </div>
+            ) : (
             <Pokedex 
                 loading={loading}
                 pokemons={pokemons} 
@@ -50,6 +75,7 @@ export default function App () {
                 setPage={setPage}
                 total={total}
             />
+            )}
         </div>
     )
 }

@@ -11,15 +11,16 @@ const PokeCard = (props: any) => {
             <div className="card-body">
                 <div className="card-top">
                     <h3>{pokemon.name}</h3>
-                    <div>
-                        # {pokemon.id}
+                    <div className="pokemon-id">
+                        N.º{pokemon.id}
                     </div>
                 </div>
                 <div className="card-bottom">
                     <div className="pokemon-type">
+                        Type: 
                         {pokemon.types.map((type: any, idx: any) => {
                             return (
-                                <div key={idx} className="pokemon-type-text">{type.type.name}</div>
+                                <div key={idx} className="pokemon-type-text"> {type.type.name}</div>
                             )
                         })}
                     </div>
