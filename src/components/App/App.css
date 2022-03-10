@@ -3,13 +3,22 @@ body {
     color: #162447;
 }
 
+.pokemon-form {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+* {
+  font-family: "Press Start 2P", cursive;
+}
+
 .App {
     text-align: center;
 }
 
 h1 {
     font-size: 57px;
-    font-family: "Press Start 2P", cursive;
 }
 
 .header {
@@ -29,11 +38,6 @@ h1 {
     font-size: 30px;
     text-align: center;
   }
-}
-
-
-.not-found {
-    font-family: "Press Start 2P", cursive
 }
 
 .sad-pika {
