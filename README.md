@@ -1,7 +1,7 @@
 ![GitHub last commit](https://img.shields.io/github/last-commit/lurepetto/pokedexamedi?logo=github)
 
 ## 😺 Pokedexamedi 
-Pokexamedi is an optimized developed web platform for searching your favorite pokemons right from the pokeapi, it was developed by [lucas repetto](https://github.com/lurepetto)
+Pokexamedi is an optimized developed web platform for searching your favorite pokemons right from the pokeapi, it was developed by me, [Lucas Repetto](https://github.com/lurepetto)
 using [Typescript](https://www.typescriptlang.org/docs/) and [React App](https://reactjs.org/docs/getting-started.html). Builded with [GatsbyJS](https://www.gatsbyjs.com/docs)
 and automatically deployed with [GatsbyCloud](https://www.gatsbyjs.com/products/cloud/).
 
