@@ -5,14 +5,13 @@ const Searchbar = (props: any) => {
     const { onSearch } = props;
     const [search, setSearch] = useState("");
 
-    // receive and set incoming pokemon name
     const onChange = (event:any) => {
         setSearch(event.target.value);
         if (event.target.value.length === 0) {
             onSearch(null);
         }
     };
-    // search pokemon
+
     const onClick = async (event: any) => {
         onSearch(search);
     }
@@ -23,7 +22,7 @@ const Searchbar = (props: any) => {
                 <input placeholder="Search your favorite Pokemon by it's full name 😺" type="text" onChange={onChange} />
             </div>
             <div className="searchbar-btn">
-                <button onClick={onClick}>Buscar</button>
+                <button onClick={onClick}>Search</button>
             </div>
         </div>
     )

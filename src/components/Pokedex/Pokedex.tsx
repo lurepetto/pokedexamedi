@@ -8,7 +8,7 @@ const Pokedex = (props:any) => {
     return (
         <div>
             { loading ? 
-            <div>Cargando pokemones...</div> :
+            <div>Loading Pokemons...</div> :
             <div className="pokedex-grid">
                 {pokemons.map((pokemon: any, idx: any) => {
                     return (
