@@ -5,7 +5,7 @@ Pokexamedi is an optimized developed web platform for searching your favorite po
 using [Typescript](https://www.typescriptlang.org/docs/) and [React App](https://reactjs.org/docs/getting-started.html). Builded with [GatsbyJS](https://www.gatsbyjs.com/docs)
 and automatically deployed with [GatsbyCloud](https://www.gatsbyjs.com/products/cloud/).
 
-You can find the production server [here](https://www.lucasrepetto.com/).
+You can find the production server here -> [https://www.lucasrepetto.com/](https://www.lucasrepetto.com/).
 
 ## 🚀 Quick start
 
