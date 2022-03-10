@@ -1,54 +1,34 @@
-<p align="center">
-  <a href="https://www.gatsbyjs.com/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts">
-    <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
-  </a>
-</p>
-<h1 align="center">
-  Gatsby minimal TypeScript starter
-</h1>
+![GitHub last commit](https://img.shields.io/github/last-commit/lurepetto/pokedexamedi?logo=github)
+
+## 😺 Pokedexamedi 
+Pokexamedi is an optimized developed web platform for searching your favorite pokemons right from the pokeapi, it was developed by [lucas repetto](https://github.com/lurepetto)
+using [Typescript][https://www.typescriptlang.org/docs/] and [React App](https://reactjs.org/docs/getting-started.html), and also builded and deployed using [GatsbyJS](https://www.gatsbyjs.com/docs).
+
+You can find the production server [here](https://pokedexamedimain27500.gatsbyjs.io).
 
 ## 🚀 Quick start
 
-1.  **Create a Gatsby site.**
+1.  **Clone the project**
 
-    Use the Gatsby CLI to create a new site, specifying the minimal TypeScript starter.
-
-    ```shell
-    # create a new Gatsby site using the minimal TypeScript starter
-    npm init gatsby
-    ```
-
-2.  **Start developing.**
-
-    Navigate into your new site’s directory and start it up.
+    Go to your directory, and git clone this project
 
     ```shell
-    cd my-gatsby-site/
-    npm run develop
+    git clone https://github.com/lurepetto/pokedexamedi.git
     ```
 
-3.  **Open the code and start customizing!**
+2.  **Download dependencies**
 
-    Your site is now running at http://localhost:8000!
+    Download project dependencies using NPM
 
-    Edit `src/pages/index.tsx` to see your site update in real-time!
+    ```shell
+    cd pokedexamedi/
+    npm i
+    ```
 
-4.  **Learn more**
+3.  **Run the project, and enjoy**
 
-    - [Documentation](https://www.gatsbyjs.com/docs/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
+    Run the project on your local machine and go to http://localhost:8000!
 
-    - [Tutorials](https://www.gatsbyjs.com/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-
-    - [Guides](https://www.gatsbyjs.com/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-
-    - [API Reference](https://www.gatsbyjs.com/docs/api-reference/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-
-    - [Plugin Library](https://www.gatsbyjs.com/plugins?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-
-    - [Cheat Sheet](https://www.gatsbyjs.com/docs/cheat-sheet/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-
-## 🚀 Quick start (Gatsby Cloud)
-
-Deploy this starter with one click on [Gatsby Cloud](https://www.gatsbyjs.com/cloud/):
-
-[<img src="https://www.gatsbyjs.com/deploynow.svg" alt="Deploy to Gatsby Cloud">](https://www.gatsbyjs.com/dashboard/deploynow?url=https://github.com/gatsbyjs/gatsby-starter-minimal-ts)
+    ```shell
+    gatsby develop
+    ```
