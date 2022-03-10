@@ -1,28 +1,39 @@
 import React from "react";
-import PokemonStats from "../PokemonStats/PokemonStats";
-import SearchBox from "../SearchBox/SearchBox";
-import './Pokedex.css';
-import PokeList from '../PokeList/PokeList';
-import { PokemonSchema } from "../../types/PokemonSchema";
+import "./Pokedex.css";
+import PokeCard from '../PokeCard/PokeCard';
+import Pagination from '../Pagination/Pagination';
 
-interface PokedexProps {
-    searchedPokemons: PokemonSchema[];
-}
+const Pokedex = (props:any) => {
+    const {pokemons, page, setPage, total} = props;
 
-const Pokedex = ({ searchedPokemons }: PokedexProps) => {
+    const lastPage = () => {
+        const nextPage = Math.max(page, 0);
+        setPage(nextPage);
+    }
+
+    const nextPage = () => {
+        const nextPage = Math.min(page, total);
+        setPage(nextPage);
+    }
     return (
-        <div className="pokedex-container">
-            <div className="pokelist-container">
-                <SearchBox />
-                <PokeList 
-                    searchedPokemons={searchedPokemons}
+        <div>
+            <div className="header">
+                <h1>Pokedex</h1>
+                <Pagination 
+                    page={page + 1}
+                    totalPages={111}
+                    onLeftClick={lastPage}
+                    onRightClick={nextPage}
                 />
             </div>
-            <div className="pokesearchresult-container">
-                <PokemonStats />
+            <div className="pokedex-grid">
+                {pokemons.map((pokemon: any, idx: any) => {
+                    return (
+                        <PokeCard pokemon={pokemon} key={pokemon.name} />
+                    )
+                })}
             </div>
         </div>
     )
 }
-
 export default Pokedex;
