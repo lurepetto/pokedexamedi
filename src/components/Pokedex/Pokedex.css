@@ -4,6 +4,19 @@
     grid-gap: 18px;
     padding: 0px 10px;
 }
+
+@media screen and (max-width: 992px) {
+  .pokedex-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .pokedex-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
 .pokedex-container {
     background-color: #f40552;
     margin-left: 15%;
