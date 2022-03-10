@@ -27,8 +27,6 @@ export default function App () {
         try {
             setLoading(true);
             const data = await getPokemons(12, 12 * page);
-            // Cambiamos los results por promesas para que traiga la info completa con
-            // getPokemonData()
             const promises = data.results.map(async (pokemon: any) => {
                 return await getPokemonData(pokemon.url);
             })
