@@ -3,6 +3,7 @@ import Pokedex from '../Pokedex/Pokedex';
 import './App.css';
 import { getPokemons, getPokemonData, searchPokemon } from '../../services/api';
 import Searchbar from "../Searchbar/Searchbar";
+import Pagination from "../Pagination/Pagination";
 
 export default function App () {
     const [pokemons, setPokemons] = useState<any>([]);
@@ -11,6 +12,16 @@ export default function App () {
     const [loading, setLoading] = useState(true);
     const [searching, setSearching] = useState(false);
     const [notFound, setNotFound] = useState(false);
+
+    const lastPage = () => {
+        const nextPage = Math.max(page - 1, 0);
+        setPage(nextPage);
+    }
+
+    const nextPage = () => {
+        const nextPage = Math.min(page + 1, total);
+        setPage(nextPage);
+    }
 
     const fetchPokemons = async () => {
         try {
@@ -61,7 +72,15 @@ export default function App () {
             <div className="header">
                 <h1>Pokedexamedi</h1>
             </div>
-            <Searchbar onSearch={onSearch} />
+            <div className="pokemon-form">
+                <Searchbar onSearch={onSearch} />
+                <Pagination 
+                    page={page + 1}
+                    totalPages={total}
+                    onLeftClick={lastPage}
+                    onRightClick={nextPage}
+                />
+            </div>
             {notFound ? (
                 <div className="not-found">
                     <span className="sad-pika">😿</span>

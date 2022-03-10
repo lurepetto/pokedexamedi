@@ -1,14 +1,25 @@
 .pagination {
     display: flex;
-    flex-direction: row;
     align-items: center;
     font-weight: 800;
+    margin-bottom: 30px;
 }
 
 .pagination-button {
     color: black;
     padding: 8px 16px;
     border: none;
-    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 3px;
+}
+
+.pagination-text {
+    margin: 0px 10px;
+}
+
+.pagination-button:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    background-color: #162447;
+    -webkit-transition: background-color 1000ms linear;
+    -ms-transition: background-color 1000ms linear;
+    transition: background-color 1000ms linear;
 }
