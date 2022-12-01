@@ -68,7 +68,7 @@ export default function App () {
     return (
         <div>
             <div className="header">
-                <h1>Pokedexamedi</h1>
+                <h1>Lucas Pokedex</h1>
             </div>
             <div className="pokemon-form">
                 <Searchbar onSearch={onSearch} />
